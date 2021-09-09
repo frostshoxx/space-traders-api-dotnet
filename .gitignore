@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SpaceTradersApiDotNet/.vs/SpaceTradersApiDotNet/v16
+/SpaceTradersApiDotNet/SpaceTradersApiDotNet/bin/Debug/net5.0
+/SpaceTradersApiDotNet/SpaceTradersApiDotNet/obj
