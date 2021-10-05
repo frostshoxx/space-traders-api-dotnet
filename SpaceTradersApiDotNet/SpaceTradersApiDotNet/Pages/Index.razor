@@ -1,7 +1,18 @@
 ﻿@page "/"
+@using SpaceTradersApiDotNet.Data
+@inject SpaceTradersApiService SpaceTradersApiService
 
 <h1>Frostshoxx's Space Traders API Blazor Client</h1>
 
 This is a Blazor Server App for SpaceTraders API https://spacetraders.io/
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<GameServerStatus Title="Space Traders API Server Status: " Status=@serverStatus?.Status/>
+
+@code {
+    private ServerStatus serverStatus { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        serverStatus = await SpaceTradersApiService.GetServerStatus();
+    }
+}
