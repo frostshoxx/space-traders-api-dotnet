@@ -6,6 +6,157 @@
 	},
 	"item": [
 		{
+			"name": "Ships",
+			"item": [
+				{
+					"name": "Get your ships",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Purchase A Ship",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "location",
+									"value": "OE-PM-TR",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "JW-MK-I",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.spacetraders.io/my/ships?token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacetraders",
+								"io"
+							],
+							"path": [
+								"my",
+								"ships"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Ships To Purchase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.spacetraders.io/systems/OE/ship-listings?token=6ea9a096-cbf5-4ddd-93f0-0271413f9a98",
+							"host": [
+								"api",
+								"spacetraders",
+								"io"
+							],
+							"path": [
+								"systems",
+								"OE",
+								"ship-listings"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "6ea9a096-cbf5-4ddd-93f0-0271413f9a98"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loans",
+			"item": [
+				{
+					"name": "View Available Loans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.spacetraders.io/types/loans?token={{token}}",
+							"host": [
+								"api",
+								"spacetraders",
+								"io"
+							],
+							"path": [
+								"types",
+								"loans"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take Out A Loan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "STARTUP",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.spacetraders.io/my/loans?token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacetraders",
+								"io"
+							],
+							"path": [
+								"my",
+								"loans"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Generate an access token",
 			"request": {
 				"method": "POST",
@@ -33,7 +184,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.spacetraders.io/my/account?token=6ea9a096-cbf5-4ddd-93f0-0271413f9a98",
+					"raw": "https://api.spacetraders.io/my/account?token={{token}}",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -47,7 +198,7 @@
 					"query": [
 						{
 							"key": "token",
-							"value": "6ea9a096-cbf5-4ddd-93f0-0271413f9a98"
+							"value": "{{token}}"
 						}
 					]
 				}
@@ -72,33 +223,6 @@
 						"status"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "View Available Loans",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "Take Out A Loan",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
-			},
-			"response": []
-		},
-		{
-			"name": "View Ships To Purchase",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
 			},
 			"response": []
 		}
