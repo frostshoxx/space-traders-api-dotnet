@@ -35,5 +35,24 @@ namespace SpaceTradersApiDotNet.Data
 
             return new ServerStatus { Status = $"Unable to connect to {_baseUrl}" };
         }
+
+        public async Task<ServerStatus> GenerateAccessToken(string username)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Post, new Uri($"{_baseUrl}/{username}/status"));
+
+            var client = _clientFactory.CreateClient();
+
+            var response = await client.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                using var responseStream = await response.Content.ReadAsStreamAsync();
+                var result = await JsonSerializer.DeserializeAsync<ServerStatus>(responseStream);
+
+                return result;
+            }
+
+            return new ServerStatus { Status = $"Unable to connect to {_baseUrl}" };
+        }
     }
 }

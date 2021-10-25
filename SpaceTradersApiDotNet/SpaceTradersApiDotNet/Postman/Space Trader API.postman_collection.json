@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "47795a7a-42ff-463a-859e-556f19eeb500",
+		"name": "Space Trader API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate an access token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.spacetraders.io/users/frostshoxxtest2/claim",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spacetraders",
+						"io"
+					],
+					"path": [
+						"users",
+						"frostshoxxtest2",
+						"claim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View User Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spacetraders.io/my/account?token=6ea9a096-cbf5-4ddd-93f0-0271413f9a98",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spacetraders",
+						"io"
+					],
+					"path": [
+						"my",
+						"account"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "6ea9a096-cbf5-4ddd-93f0-0271413f9a98"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spacetraders.io/game/status",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spacetraders",
+						"io"
+					],
+					"path": [
+						"game",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Available Loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Take Out A Loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "View Ships To Purchase",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
